@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mass Converter</title>
+    <link rel="stylesheet" href="mass.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Convert Weight (Mass)</h1>
+        <form id="massForm">
+            <div class="form-group">
+                <label for="inputUnit">From:</label>
+                <select id="inputUnit" name="inputUnit" required>
+                    <option value="kg">kilogram (kg)</option>
+                    <option value="g">gram (g)</option>
+                    <option value="lb">pound (lb)</option>
+                    <option value="oz">ounce (oz)</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="outputUnit">To:</label>
+                <select id="outputUnit" name="outputUnit" required>
+                    <option value="kg">kilogram (kg)</option>
+                    <option value="g">gram (g)</option>
+                    <option value="lb">pound (lb)</option>
+                    <option value="oz">ounce (oz)</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="inputMass">Value to Convert</label>
+                <input type="number" id="inputMass" name="inputMass" step="0.01" required>
+            </div>
+            <div class="form-group">
+                <button type="button" id="clearBtn">Clear</button>
+                <button type="submit">Calculate</button>
+            </div>
+        </form>
+        <div id="result"></div>
+    </div>
+    <script src="mass.js"></script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <title>Toolify - Conversion Tools</title>
+    <link rel="icon" href="https://res.cloudinary.com/dqj0oallu/image/upload/v1716223730/WhatsApp_Image_2024-05-17_at_10.12.42_PM_pddkbg.jpg" type="image/x-icon">
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+</head>
+<body>
+    <header>
+        <div class="box-con">
+            <div class="navbar">
+                <div class="logo">
+                    <img src="https://res.cloudinary.com/drwxefcrx/image/upload/v1716399705/abcd_keisp1.png" alt="Logo">
+                    <span class="name">Toolify</span>
+                </div>
+                <div class="btn">
+                    <i class="fa fa-bars menu-btn"></i>
+                </div>
+                <nav>
+                    <li><a href="Landing.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <div class="toggle-switch">
+                        <label class="switch">
+                            <input type="checkbox" id="toggle" onclick="toggleBackground()">
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="main-content">
+            <h1>Welcome To <span class="tool">Toolify</span> !</h1>
+            <p>All Your Conversion Tools in One Place</p>
+        </div>
+        <div class="typing-effect">
+            <h2>Popular Tools:</h2>
+            <div class="multiText"></div>
+        </div>
+        <div class="buttons">
+            <a class="get-started" href="card.html" id="get-started">Get Started</a>
+        </div>
+        
+        <div class="blogs-corner">
+            <a href="#">Read Our Latest Blogs <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div id="loader" class="loader" style="display: none;"></div>
+    </main>
+    <script>
+        var typingEffect = new Typed(".multiText", {
+            strings: ["MASS Convertor", "Word To PDF", "BMI convertor","Calculator"],
+            loop: true,
+            typeSpeed: 100,
+            backSpeed: 80,
+            backDelay: 1500
+        });
+
+        function toggleBackground() {
+            var toggle = document.getElementById("toggle");
+            var body = document.querySelector("body");
+
+            if (toggle.checked) {
+                body.style.backgroundColor = "#000";
+            } else {
+                body.style.backgroundColor = "";
+            }
+        }
+
+        document.getElementById('get-started').addEventListener('click', function(event) {
+            event.preventDefault();
+            document.getElementById('loader').style.display = 'block';
+            setTimeout(function() {
+                window.location.href = 'card.html';
+            }, 1000); // Adjust delay as needed
+        });
+    </script>
+    <script src="lan.js"></script>
+</body>
+</html>

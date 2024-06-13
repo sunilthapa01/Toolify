@@ -1,0 +1,73 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Sigmar&display=swap');
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #48cae4;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: "Sigmar", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+}
+
+.container {
+    text-align: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+p {
+    color: #666;
+    margin: 10px 0;
+}
+
+.upload-section {
+    position: relative;
+    display: inline-block;
+}
+
+.upload-button {
+    background-color: #ff4c4c;
+    color: white;
+    padding: 15px 30px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.upload-button:hover {
+    background-color: #ff1a1a;
+}
+
+.icon-buttons {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: -50px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.icon-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.icon-button img {
+    width: 30px;
+    height: 30px;
+}
